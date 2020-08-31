@@ -1,7 +1,7 @@
 # Market Basket analysis
 
 ## General info
-The project concerns market basket analysis and product recomendation by using the Apriori algorithm (association method). 
+The project concerns market basket analysis and product recomendation by using the Apriori algorithm (association method). The project includes EDA analysis and basket analysis by the using Apriori algorithm.
 
 Market basket analysis is a technique that allow to discover the relatonships between products. It is based on searching for the most common combination of products in each transaction. In our analysis we use the Apriori algorithm and the main goal is to sorting the products and creating the best relationship. We use MLxtend library to create the basket analysis.
 
