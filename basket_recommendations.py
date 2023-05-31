@@ -3,10 +3,11 @@ from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 
 
-URL = 'C:\Python Scripts\Datasets\online_retail.csv'
+URL = 'Datasets\online_retail.csv'
 
 
 def clean_data(df):
+    '''Data preprocessing: deleting missing data, filling missing values, feature engineering.'''
     df['InvoiceNo'] = df['InvoiceNo'].astype('str')
     df = df[~df['InvoiceNo'].str.contains('C',na=False)]
     df = df.assign(CustomerID = df.CustomerID.fillna('00000'),
@@ -16,12 +17,14 @@ def clean_data(df):
 
 
 def read_data(path):
+    '''Read and preprocess data'''
     data = pd.read_csv(path, encoding = 'unicode_escape')
     df = clean_data(data)
     return df
 
 
 def get_recommendations(df):
+    '''The function to get recommendations'''
     data = df[df['Country'] == 'Netherlands']
     # preparing data
     basket = data.groupby(['InvoiceNo', 'Description'])['Quantity'].sum().unstack().fillna(0)
