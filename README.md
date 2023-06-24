@@ -19,3 +19,6 @@ The project is created with:
 - libraries: MLxtend, pandas, numpy, matplotlib.
 
 To run this project use Jupyter Notebook or Google Colab.
+You can run the script in the terminal:
+
+    basket_recommendations.py
