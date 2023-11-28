@@ -7,7 +7,7 @@ MIN_ASSOCIATION_THRESHOLD = 1
 
 
 def clean_data(df):
-    '''Data preprocessing: delete missing data, fill missing values, feature engineering'''
+    '''Data preprocessing: delete missing data, fill missing values and feature engineering'''
     df['InvoiceNo'] = df['InvoiceNo'].astype('str')
     df = df[~df['InvoiceNo'].str.contains('C', na=False)]
     df = df.assign(
@@ -20,7 +20,11 @@ def clean_data(df):
 
 def read_data(path):
     '''Read and preprocess data'''
-    data = pd.read_csv(path, encoding='unicode_escape')
+    try:
+        data = pd.read_csv(path, encoding='unicode_escape')
+    except FileNotFoundError:
+        print(f"Error: File not found at {path}")
+        return None
     df = clean_data(data)
     return df
 
