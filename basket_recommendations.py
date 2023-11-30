@@ -52,7 +52,7 @@ def get_recommendations(df):
     prod_rec = prod_rec.rename(columns={"antecedents": "Products", "consequents": "Recommendation"})
     
     # Save recommendations to a CSV file
-    #prod_rec.to_csv('list_of_products.csv', index=False)
+    prod_rec.to_csv('list_of_products.csv', index=False)
     print(prod_rec.head())
     
     # Print example recommendations
