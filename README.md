@@ -12,6 +12,7 @@ Market basket analysis is a technique that allow to discover the relatonships be
 ### Project contains:
 - Market basket analysis by using the Apriori algorithm  - **Basket_analysis.ipynb** 
 - Python script with basket recommendations - **basket_recommendations.py**
+- data - data used in the project.
 
 ### Technologies
 The project is created with:
