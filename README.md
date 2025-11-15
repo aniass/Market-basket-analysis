@@ -16,6 +16,9 @@ Market basket analysis is a technique that allow to discover the relatonships be
 - Python script with basket recommendations - **basket_recommendations.py**
 - data - data used in the project.
 
+### Summary
+The project involved market basket anlysis using the Apriori algorithm, which is commonly used in associative analysis. The goal of the analysis was to discover association rules that predict which products are frequently purchased together. I have started with data analysis for better meet the data. Then I have cleaned it and prepared to the modelling. Next I have used MLxtend library to create the basket analysis. Finally I was built the recommendation model that can support marketing and sales decisions. Based on the results several interesting association rules were identified, indicating which products are most often purchased together. With this information, the example company could better tailor its promotions (e.g. "buy one, get one half price") offers or product recommendations in the shopping cart. 
+
 ### Technologies
 The project is created with:
 - Python 3.6
