@@ -22,7 +22,11 @@ The project involved market basket anlysis using the Apriori algorithm, which is
 ### Technologies
 The project is created with:
 - Python 3.6
-- libraries: MLxtend, pandas, numpy, matplotlib.
+- libraries: mlxtend, pandas, numpy, matplotlib, seaborn.
+
+I have used Pandas for data manipulation and NumPy for calculations related to data analysis. Using the mlxtend package I have analyzed association rules using the Apriori algorithm. I created graphs that visualize the relationships between different products using Matplotlib and Seaborn.
+
+**Running project:**
 
 To run this project use Jupyter Notebook or Google Colab.
 You can run the script in the terminal:
